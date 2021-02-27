@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>testing</title>
+</head>
+
+<body>
+    <button id='b'>Test</button>
+    <script>
+        var checkoutButton = document.getElementById("b");
+        checkoutButton.addEventListener("click", function() {
+            fetch("http://alpha.abhosting.net:1033/payment/create", {
+                method: "POST",
+                body: JSON.stringify({
+                    name: 'Josiah Bloomer',
+                    title: 'Creative Director',
+                    organization: 'Xperience Church',
+                    address: '3158 County Rd 5-1',
+                    phone: '4199138231',
+                    city: 'Delta',
+                    state: 'OH',
+                    zip: '43515',
+                    email: 'josiahcbloomer@gmail.com',
+                })
+            }).then(response => response.json())
+            .then(a => {
+                console.log(a)
+            })
+        })
+    </script>
+</body>
+
+</html>
