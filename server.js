@@ -9,7 +9,7 @@ app.get('/', (req, res) => {
     res.send('<title>Thingy</title>running')
 })
 
-app.post('/payment/create', async (req, res) => {
+app.post('/payment/create', (req, res) => {
     res.set('Access-Control-Allow-Origin', '*');
     console.log(req.body);
     res.send(req.body)
