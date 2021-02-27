@@ -10,7 +10,7 @@
     <script>
         var checkoutButton = document.getElementById("b");
         checkoutButton.addEventListener("click", function() {
-            fetch("http://alpha.abhosting.net:1033/payment/create", {
+            fetch("http://my.domain:1033/payment/create", {
                 method: "POST",
                 body: JSON.stringify({
                     name: 'Josiah Bloomer',
